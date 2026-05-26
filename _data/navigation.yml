@@ -1,9 +1,8 @@
 # Main navigation links
-# The top-level Publications item remains the full publications page.
 main:
   - title: "Home"
     url: /
   - title: "Publications"
     url: /publications/
   - title: "Academic Service"
-    url: /service/
+    url: /academic-service/

@@ -1,4 +1,5 @@
 # Main navigation links
+# The top-level Publications item remains the full publications page.
 main:
   - title: "Home"
     url: /

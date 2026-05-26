@@ -10,7 +10,6 @@
 @import "variables";
 @import "mixins";
 @import "vendor/susy/susy";
-
 @import "reset";
 @import "base";
 @import "utilities";
@@ -22,20 +21,15 @@
 @import "navigation";
 @import "footer";
 @import "syntax";
-
 @import "forms";
-
 @import "page";
 @import "archive";
 @import "sidebar";
-
 @import "vendor/font-awesome/fontawesome";
 @import "vendor/font-awesome/solid";
 @import "vendor/font-awesome/brands";
 @import "vendor/magnific-popup/magnific-popup";
-
 @import "print";
-
 
 /* ----------------------------------------------------------
    Yu-Peng Lin academic homepage custom styling
@@ -57,7 +51,8 @@ body {
   background: linear-gradient(180deg, #f8fbfd 0%, #ffffff 35%, #f8faf8 100%);
 }
 
-/* Hide the duplicated site-name text in the masthead. The sidebar already carries the profile identity. */
+/* Hide the duplicated site-name text in the masthead.
+   The sidebar already carries the profile identity. */
 .masthead__menu-item--lg,
 .greedy-nav .site-title,
 .site-title {
@@ -118,43 +113,68 @@ body {
 .author__content .author__name {
   margin: 0 0 12px;
   color: var(--yl-ink);
-  font-size: 1.65rem;
+  font-size: 1.58rem;
   line-height: 1.15;
   letter-spacing: -.015em;
   font-weight: 650;
 }
 
 .author__content .author-line {
-  margin: 0 0 10px;
-  line-height: 1.45;
+  margin: 0 0 9px;
+  line-height: 1.42;
 }
 
 .author__content .author-role {
   color: #344f63;
-  font-size: .98rem;
+  font-size: .92rem;
   font-weight: 650;
 }
 
 .author__content .author-affiliation {
   color: #426273;
-  font-size: .96rem;
+  font-size: .9rem;
 }
 
 .author__content .author-location {
   color: var(--yl-muted);
-  font-size: .92rem;
+  font-size: .86rem;
 }
 
 .author__content .author-interests {
   color: var(--yl-muted);
-  font-size: .9rem;
-  line-height: 1.5;
+  font-size: .84rem;
+  line-height: 1.45;
 }
 
+.author-section-nav,
 .author__urls-wrapper {
   margin-top: 18px;
   padding-top: 14px;
   border-top: 1px solid var(--yl-line);
+}
+
+.author-nav-title {
+  margin: 0 0 9px;
+  color: #173b57;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.author-section-nav a {
+  display: block;
+  margin: 0 0 8px;
+  color: #344f63;
+  font-size: .88rem;
+  line-height: 1.35;
+  text-decoration: none;
+}
+
+.author-section-nav a:hover,
+.author__urls.social-icons a:hover {
+  color: var(--yl-accent);
+  text-decoration: none;
 }
 
 .author__urls-wrapper .btn {
@@ -162,16 +182,29 @@ body {
 }
 
 .author__urls.social-icons {
+  display: block;
+  position: relative;
   margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.author__urls.social-icons::before,
+.author__urls.social-icons::after {
+  display: none;
 }
 
 .author__urls.social-icons li {
   white-space: normal;
+  list-style: none;
 }
 
 .author__urls.social-icons a {
   color: #344f63;
-  font-size: .92rem;
+  font-size: .88rem;
+  text-decoration: none;
 }
 
 .page__content {
@@ -183,10 +216,63 @@ body {
   color: #173b57;
 }
 
+.page__content .yl-intro-card {
+  margin: 0 0 2rem;
+  padding: 1.45rem 1.6rem;
+  border: 1px solid var(--yl-line);
+  border-radius: 24px;
+  background: linear-gradient(135deg, #ffffff 0%, #f5f9fc 55%, #edf6fa 100%);
+  box-shadow: var(--yl-shadow);
+}
+
+.page__content .yl-section-label {
+  margin-bottom: .7rem;
+  color: var(--yl-accent);
+  font-size: .76rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.page__content .yl-intro-card p {
+  margin-bottom: .72rem;
+  color: #344f63;
+  font-size: .9rem;
+  line-height: 1.65;
+}
+
+.page__content .yl-intro-card .yl-intro-lead {
+  color: #173b57;
+  font-size: .98rem;
+  font-weight: 650;
+  line-height: 1.55;
+}
+
+.yl-keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .45rem;
+  margin-top: .95rem;
+}
+
+.yl-keywords span {
+  display: inline-block;
+  padding: .28rem .56rem;
+  border: 1px solid #d7e7ef;
+  border-radius: 999px;
+  color: #2f5f79;
+  background: rgba(255, 255, 255, .72);
+  font-size: .76rem;
+  line-height: 1.2;
+}
+
 @media (max-width: 900px) {
   .sidebar {
     border-radius: 20px;
     margin-bottom: 1.5rem;
   }
-}
 
+  .page__content .yl-intro-card {
+    padding: 1.25rem 1.2rem;
+  }
+}

@@ -6,6 +6,7 @@
   <title>Yu-Peng Lin | Academic Homepage</title>
   <meta name="description" content="Academic homepage of Yu-Peng Lin, PhD candidate in Applied Linguistics at Tsinghua University.">
   <style>
+
     :root {
       --ink: #183247;
       --text: #344f63;
@@ -14,13 +15,14 @@
       --soft: #f5f9fc;
       --soft-2: #edf6fa;
       --accent: #2d6f8e;
+      --accent-dark: #1e5c78;
       --accent-2: #7ca58d;
       --white: #ffffff;
       --shadow: 0 14px 38px rgba(25, 55, 80, 0.09);
+      --shadow-small: 0 8px 22px rgba(25, 55, 80, 0.065);
     }
 
     * { box-sizing: border-box; }
-
     html { scroll-behavior: smooth; }
 
     body {
@@ -32,7 +34,7 @@
     }
 
     a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    a:hover { color: var(--accent-dark); text-decoration: underline; }
 
     .topbar {
       position: sticky;
@@ -51,13 +53,16 @@
       align-items: center;
       justify-content: flex-end;
       gap: 24px;
+      flex-wrap: wrap;
     }
 
     .topbar a {
       color: #526375;
       font-size: 0.92rem;
-      font-weight: 600;
+      font-weight: 650;
     }
+
+    .topbar a:hover, .topbar a.active { color: var(--accent-dark); text-decoration: none; }
 
     .layout {
       max-width: 1160px;
@@ -132,7 +137,7 @@
       margin: 0 0 9px;
       color: #6f8190;
       font-size: .72rem;
-      font-weight: 700;
+      font-weight: 750;
       letter-spacing: .08em;
       text-transform: uppercase;
     }
@@ -144,19 +149,19 @@
       border-radius: 12px;
       color: #344f63;
       font-size: .86rem;
-      font-weight: 600;
+      font-weight: 650;
       background: rgba(255, 255, 255, .45);
     }
 
-    .side-nav a:hover {
-      color: var(--accent);
+    .side-nav a:hover, .side-nav a.active {
+      color: var(--accent-dark);
       background: var(--soft-2);
       text-decoration: none;
     }
 
     main { min-width: 0; }
 
-    .intro-card, .section-card {
+    .intro-card, .section-card, .page-card {
       border: 1px solid var(--line);
       border-radius: 26px;
       background: rgba(255, 255, 255, 0.92);
@@ -166,10 +171,10 @@
     .intro-card {
       padding: 30px 34px;
       margin-bottom: 26px;
-      font-size: .93rem; /* smaller biography text */
+      font-size: .91rem;
     }
 
-    .section-card {
+    .section-card, .page-card {
       padding: 30px 34px;
       margin-bottom: 24px;
     }
@@ -189,10 +194,10 @@
       color: var(--ink);
       font-size: 1rem;
       line-height: 1.55;
-      font-weight: 600;
+      font-weight: 650;
     }
 
-    .intro-card p:last-child, .section-card p:last-child { margin-bottom: 0; }
+    .intro-card p:last-child, .section-card p:last-child, .page-card p:last-child { margin-bottom: 0; }
 
     h2 {
       margin: 0 0 6px;
@@ -203,9 +208,9 @@
     }
 
     h3 {
-      margin: 20px 0 7px;
+      margin: 22px 0 9px;
       color: #1e4e68;
-      font-size: 1.02rem;
+      font-size: 1.05rem;
       line-height: 1.35;
     }
 
@@ -215,14 +220,14 @@
       font-size: .9rem;
     }
 
-    .keywords {
+    .keywords, .tag-row {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin-top: 18px;
+      margin-top: 14px;
     }
 
-    .keywords span, .tag {
+    .keywords span, .tag, .journal-pill {
       display: inline-flex;
       align-items: center;
       border: 1px solid #d4e5ed;
@@ -231,7 +236,7 @@
       color: #3f6474;
       background: #f4fafc;
       font-size: .78rem;
-      font-weight: 600;
+      font-weight: 650;
       line-height: 1.2;
     }
 
@@ -241,21 +246,103 @@
       margin-top: 16px;
     }
 
-    .edu-title, .pub-title {
+    .edu-title, .pub-title, .service-title {
       color: var(--ink);
-      font-weight: 700;
+      font-weight: 750;
     }
 
     .meta { color: var(--muted); font-size: .88rem; }
-
     .pub-item p { margin: 6px 0; }
+    .doi { font-size: .88rem; word-break: break-word; }
+    .journal { font-style: italic; }
 
-    .doi {
-      font-size: .88rem;
-      word-break: break-word;
+    .page-hero {
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #e7eff4;
     }
 
-    .journal { font-style: italic; }
+    .page-hero h2 { font-size: 1.9rem; }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 16px;
+      color: var(--muted);
+      font-size: .9rem;
+      font-weight: 650;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin: 14px 0 18px;
+    }
+
+    .service-role-card {
+      border: 1px solid #dceaf1;
+      border-radius: 20px;
+      padding: 18px;
+      background: linear-gradient(180deg, #ffffff 0%, #f5fafc 100%);
+      box-shadow: var(--shadow-small);
+    }
+
+    .service-role-card .role-name {
+      margin: 0 0 7px;
+      color: var(--ink);
+      font-size: .98rem;
+      font-weight: 750;
+    }
+
+    .service-role-card .venue {
+      margin: 0 0 8px;
+      color: var(--accent-dark);
+      font-size: .9rem;
+      font-weight: 700;
+    }
+
+    .service-role-card .time {
+      margin: 0;
+      color: var(--muted);
+      font-size: .83rem;
+      font-weight: 650;
+    }
+
+    .journal-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 9px;
+      margin-top: 12px;
+    }
+
+    .journal-pill {
+      justify-content: space-between;
+      gap: 12px;
+      border-radius: 14px;
+      padding: 9px 11px;
+      background: #f8fcfd;
+      font-size: .82rem;
+      line-height: 1.35;
+    }
+
+    .journal-pill span:last-child {
+      color: #6c7d89;
+      white-space: nowrap;
+      font-size: .74rem;
+      font-weight: 750;
+    }
+
+    .note-box {
+      margin-top: 16px;
+      padding: 16px 18px;
+      border: 1px solid #dceaf1;
+      border-radius: 18px;
+      background: #f6fbfd;
+      color: #405b6d;
+      font-size: .92rem;
+    }
 
     footer {
       max-width: 1160px;
@@ -267,24 +354,29 @@
     }
 
     @media (max-width: 900px) {
-      .topbar-inner { justify-content: center; flex-wrap: wrap; gap: 14px; }
+      .topbar-inner { justify-content: center; gap: 14px; }
       .layout { grid-template-columns: 1fr; padding-top: 24px; }
       .sidebar { position: static; }
-      .intro-card, .section-card { padding: 24px; border-radius: 22px; }
+      .intro-card, .section-card, .page-card { padding: 24px; border-radius: 22px; }
+      .service-grid, .journal-grid { grid-template-columns: 1fr; }
       footer { text-align: left; }
     }
+
   </style>
 </head>
 <body>
   <header class="topbar" aria-label="Main navigation">
     <nav class="topbar-inner">
-      <a href="/">Home</a>
-      <a href="/publications/">Publications</a>
-      <a href="/academic-service/">Academic Service</a>
+      <a href="/" class="active">Home</a>
+      <a href="/#research-interests" class="">Research Interests</a>
+      <a href="/#education" class="">Education</a>
+      <a href="/publications/" class="">Publications</a>
+      <a href="/academic-service/" class="">Academic Service</a>
     </nav>
   </header>
 
   <div class="layout">
+
     <aside class="sidebar" aria-label="Author profile">
       <div class="profile-card">
         <div class="initials">YL</div>
@@ -299,7 +391,13 @@
           <a href="/#research-interests">Research Interests</a>
           <a href="/#research-skills">Research Skills</a>
           <a href="/#selected-publications">Selected Publications</a>
-          <a href="/#academic-service">Academic Service</a>
+          <a href="/#academic-service">Academic Service Summary</a>
+        </div>
+
+        <div class="side-block side-nav" aria-label="Full pages">
+          <p class="side-title">Full pages</p>
+          <a href="/publications/">Full Publications</a>
+          <a href="/academic-service/">Academic Service Page</a>
         </div>
 
         <div class="side-block">
@@ -310,6 +408,7 @@
     </aside>
 
     <main>
+
       <section class="intro-card" id="home">
         <span class="label">Academic Homepage</span>
         <p class="lead">PhD candidate working at the intersection of AI-assisted language learning, EFL writing, and learner psychology.</p>
@@ -376,51 +475,69 @@
         <span class="label">Journal articles</span>
         <h2>Selected Publications</h2>
         <p class="subtitle">A concise selection on the homepage. The full publication list remains on the top-menu Publications page.</p>
-
+        
         <article class="pub-item">
-          <p class="pub-title">Lin, Y., & Liu, M. (2026). From self-prepared writers to strategy effectiveness evaluators: Mediation of critical thinking during self-regulated EFL writing.</p>
-          <p><span class="journal">International Journal of Applied Linguistics</span>, 1–13.</p>
+          <p class="pub-title">Lin, Y., &amp; Liu, M.* (2026). From self-prepared writers to strategy effectiveness evaluators: Mediation of critical thinking during self-regulated EFL writing.</p>
+          <p><span class="journal">International Journal of Applied Linguistics</span>, 1–13. <span class="meta">SSCI Q1; IF = 1.7.</span></p>
           <p class="doi"><a href="https://doi.org/10.1111/ijal.70092">doi:10.1111/ijal.70092</a></p>
-          <p><span class="tag">EFL writing</span> <span class="tag">Self-regulated learning</span> <span class="tag">Critical thinking</span></p>
+          <p class="tag-row"><span class="tag">EFL writing</span> <span class="tag">Self-regulated learning</span> <span class="tag">Critical thinking</span></p>
         </article>
-
         <article class="pub-item">
-          <p class="pub-title">Lin, Y., & Yu, Z. (2025). Learner perceptions of artificial intelligence-generated pedagogical agents in language learning videos: Embodiment effects on technology acceptance.</p>
-          <p><span class="journal">International Journal of Human-Computer Interaction</span>, 41(2), 1606–1627.</p>
+          <p class="pub-title">Lin, Y., &amp; Yu, Z.* (2025). Learner perceptions of artificial intelligence-generated pedagogical agents in language learning videos: Embodiment effects on technology acceptance.</p>
+          <p><span class="journal">International Journal of Human-Computer Interaction</span>, 41(2), 1606–1627. <span class="meta">SSCI/SCI Q1; IF = 4.9; ESI 1% highly cited paper.</span></p>
           <p class="doi"><a href="https://doi.org/10.1080/10447318.2024.2359222">doi:10.1080/10447318.2024.2359222</a></p>
-          <p><span class="tag">AI pedagogical agents</span> <span class="tag">Embodiment</span> <span class="tag">Technology acceptance</span></p>
+          <p class="tag-row"><span class="tag">AI pedagogical agents</span> <span class="tag">Embodiment</span> <span class="tag">Technology acceptance</span></p>
         </article>
-
         <article class="pub-item">
-          <p class="pub-title">Lin, Y., & Yu, Z. (2025). Elucidating university students’ intentions to seek automated writing feedback from Grammarly: Toward perceptual and systemic predictors.</p>
-          <p><span class="journal">Humanities and Social Sciences Communications</span>, 12, 7.</p>
+          <p class="pub-title">Lin, Y., &amp; Yu, Z.* (2025). Elucidating university students’ intentions to seek automated writing feedback from Grammarly: Toward perceptual and systemic predictors.</p>
+          <p><span class="journal">Humanities and Social Sciences Communications</span>, 12, 7. <span class="meta">SSCI Q1; A&amp;HCI; Nature Portfolio; IF = 3.6.</span></p>
           <p class="doi"><a href="https://doi.org/10.1057/s41599-024-03861-1">doi:10.1057/s41599-024-03861-1</a></p>
-          <p><span class="tag">Automated writing feedback</span> <span class="tag">Grammarly</span> <span class="tag">EFL learners</span></p>
+          <p class="tag-row"><span class="tag">Automated writing feedback</span> <span class="tag">Grammarly</span> <span class="tag">EFL learners</span></p>
         </article>
-
         <article class="pub-item">
-          <p class="pub-title">Lin, Y., & Yu, Z. (2023). Extending Technology Acceptance Model to higher-education students’ use of digital academic reading tools on computers.</p>
-          <p><span class="journal">International Journal of Educational Technology in Higher Education</span>, 20, 34.</p>
+          <p class="pub-title">Lin, Y., &amp; Yu, Z.* (2023). Extending Technology Acceptance Model to higher-education students’ use of digital academic reading tools on computers.</p>
+          <p><span class="journal">International Journal of Educational Technology in Higher Education</span>, 20, 34. <span class="meta">SSCI Q1; IF = 16.7.</span></p>
           <p class="doi"><a href="https://doi.org/10.1186/s41239-023-00403-8">doi:10.1186/s41239-023-00403-8</a></p>
-          <p><span class="tag">Digital academic reading</span> <span class="tag">Higher education</span> <span class="tag">TAM</span></p>
+          <p class="tag-row"><span class="tag">Digital academic reading</span> <span class="tag">Technology acceptance</span> <span class="tag">Higher education</span></p>
         </article>
-
         <p style="margin-top:18px;">For a fuller list of journal articles, review papers, and conference presentations, please see the <a href="/publications/">Publications</a> page.</p>
       </section>
 
       <section class="section-card" id="academic-service">
         <span class="label">Editorial & reviewing</span>
         <h2>Academic Service</h2>
+        <p class="subtitle">Homepage summary using the same card-based service design as the Academic Service page.</p>
 
         <h3>Editorial service</h3>
-        <p><a href="https://www.emeraldgrouppublishing.com/journal/qae">Editorial Advisory Board Member · Quality Assurance in Education</a> · June 2024–present</p>
-        <p><a href="https://www.wiserpub.com/journal/SER/">Editorial Board Member · Social Education Research</a> · May 2026–present</p>
+        
+        <div class="service-grid">
+          <article class="service-role-card">
+            <p class="role-name">Editorial Advisory Board Member</p>
+            <p class="venue"><a href="https://www.emeraldgrouppublishing.com/journal/qae">Quality Assurance in Education</a></p>
+            <p class="time">June 2024–present</p>
+          </article>
+          <article class="service-role-card">
+            <p class="role-name">Editorial Board Member</p>
+            <p class="venue"><a href="https://www.wiserpub.com/journal/SER/">Social Education Research</a></p>
+            <p class="time">May 2026–present</p>
+          </article>
+        </div>
 
         <h3>Reviewing expertise</h3>
-        <p>Educational technology, applied linguistics, language education, human-computer interaction, educational psychology, higher education, and research synthesis.</p>
+        <div class="note-box">Educational technology, applied linguistics, language education, human-computer interaction, educational psychology, higher education, and research synthesis.</div>
 
-        <h3>Invited reviewer for journals</h3>
-        <p>Computers & Education · International Journal of STEM Education · System · Computer Assisted Language Learning · Language Teaching Research · Language Learning & Technology · International Journal of Human-Computer Interaction · Interactive Learning Environments · Education and Information Technologies · Teaching and Teacher Education · European Journal of Psychology of Education · IEEE Transactions on Learning Technologies · Journal of Educational Computing Research · The Asia-Pacific Education Researcher · Journal of Computer Assisted Learning · Journal of Educational Research · Behaviour & Information Technology · Universal Access in the Information Society · Learning and Motivation · Humanities and Social Sciences Communications.</p>
+        <h3>Selected invited reviewer roles</h3>
+        <div class="journal-grid">
+          <div class="journal-pill"><span>Computers &amp; Education</span><span>SSCI Q1</span></div>
+          <div class="journal-pill"><span>International Journal of STEM Education</span><span>SSCI Q1</span></div>
+          <div class="journal-pill"><span>System</span><span>SSCI Q1</span></div>
+          <div class="journal-pill"><span>Computer Assisted Language Learning</span><span>SSCI Q1</span></div>
+          <div class="journal-pill"><span>Language Teaching Research</span><span>SSCI Q1</span></div>
+          <div class="journal-pill"><span>Language Learning &amp; Technology</span><span>SSCI Q1</span></div>
+          <div class="journal-pill"><span>International Journal of Human-Computer Interaction</span><span>SSCI/SCI Q1</span></div>
+          <div class="journal-pill"><span>Interactive Learning Environments</span><span>SSCI Q1</span></div>
+        </div>
+        <p style="margin-top:18px;">For the full journal list, please see the <a href="/academic-service/">Academic Service</a> page.</p>
       </section>
     </main>
   </div>

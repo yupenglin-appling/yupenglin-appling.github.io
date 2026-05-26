@@ -1,7 +1,11 @@
-# Main navigation links
+# Static-site navigation fallback for the Jekyll files that still exist in the repository.
 main:
   - title: "Home"
     url: /
+  - title: "Research Interests"
+    url: /#research-interests
+  - title: "Education"
+    url: /#education
   - title: "Publications"
     url: /publications/
   - title: "Academic Service"

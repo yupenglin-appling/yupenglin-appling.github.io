@@ -1,35 +1,27 @@
-{% include base_path %}
-{% if page.author and site.data.authors[page.author] %}
-  {% assign author = site.data.authors[page.author] %}
-{% else %}
-  {% assign author = site.author %}
-{% endif %}
+<div class="profile-card">
+  <div class="initials">YL</div>
+  <h1>Yu-Peng Lin</h1>
+  <p class="role">PhD Candidate in Applied Linguistics</p>
+  <p>Tsinghua University</p>
+  <p>Beijing, China</p>
+  <p>Educational technology · Positive psychology · Applied linguistics</p>
 
-<div class="academic-author-card">
-  <div class="author-initials">YL</div>
-
-  <div class="author__content">
-    <h3 class="author__name">{{ author.name }}</h3>
-    <p class="author-line author-role">PhD Candidate in Applied Linguistics</p>
-    <p class="author-line author-affiliation">Tsinghua University</p>
-    <p class="author-line author-location">Beijing, China</p>
-    <p class="author-line author-interests">Educational technology · Positive psychology · Applied linguistics</p>
+  <div class="side-block side-nav" aria-label="Homepage sections">
+    <p class="side-title">Homepage sections</p>
+    <a href="/#research-interests">Research Interests</a>
+    <a href="/#research-skills">Research Skills</a>
+    <a href="/#selected-publications">Selected Publications</a>
+    <a href="/#academic-service">Academic Service Summary</a>
   </div>
 
-  <nav class="author-section-nav" aria-label="Homepage sections">
-    <p class="author-nav-title">Homepage sections</p>
-    <a href="{{ base_path }}/#research-interests">Research Interests</a>
-    <a href="{{ base_path }}/#research-skills">Research Skills</a>
-    <a href="{{ base_path }}/#selected-publications">Selected Publications</a>
-    <a href="{{ base_path }}/#academic-service">Academic Service</a>
-  </nav>
+  <div class="side-block side-nav" aria-label="Full pages">
+    <p class="side-title">Full pages</p>
+    <a href="/publications/">Full Publications</a>
+    <a href="/academic-service/">Academic Service Page</a>
+  </div>
 
-  <div class="author__urls-wrapper">
-    <p class="author-nav-title">Contact</p>
-    <ul class="author__urls social-icons">
-      {% if author.email %}
-        <li><a href="mailto:{{ author.email }}"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> Email</a></li>
-      {% endif %}
-    </ul>
+  <div class="side-block">
+    <p class="side-title">Contact</p>
+    <a href="mailto:linyupeng.research@gmail.com">Email</a>
   </div>
 </div>

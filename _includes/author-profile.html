@@ -1,0 +1,27 @@
+{% include base_path %}
+{% if page.author and site.data.authors[page.author] %}
+  {% assign author = site.data.authors[page.author] %}
+{% else %}
+  {% assign author = site.author %}
+{% endif %}
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card academic-author-card">
+  <div class="author-initials" aria-hidden="true">YL</div>
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">{{ author.name }}</h3>
+    <p class="author-line author-role p-note">PhD Candidate in Applied Linguistics</p>
+    <p class="author-line author-affiliation">Tsinghua University</p>
+    <p class="author-line author-location">Beijing, China</p>
+    <p class="author-line author-interests">Educational technology · Positive psychology · Applied linguistics</p>
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Contact</button>
+    <ul class="author__urls social-icons">
+      {% if author.email %}
+        <li><a href="mailto:{{ author.email }}"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+      {% endif %}
+    </ul>
+  </div>
+</div>

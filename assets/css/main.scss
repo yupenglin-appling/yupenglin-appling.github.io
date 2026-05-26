@@ -1,0 +1,192 @@
+---
+---
+
+/*
+ * Minimal Mistakes Jekyll Theme
+ * Academic Pages compatible stylesheet
+ */
+
+@import "vendor/breakpoint/breakpoint"; // media query mixins
+@import "variables";
+@import "mixins";
+@import "vendor/susy/susy";
+
+@import "reset";
+@import "base";
+@import "utilities";
+@import "animations";
+@import "tables";
+@import "buttons";
+@import "notices";
+@import "masthead";
+@import "navigation";
+@import "footer";
+@import "syntax";
+
+@import "forms";
+
+@import "page";
+@import "archive";
+@import "sidebar";
+
+@import "vendor/font-awesome/fontawesome";
+@import "vendor/font-awesome/solid";
+@import "vendor/font-awesome/brands";
+@import "vendor/magnific-popup/magnific-popup";
+
+@import "print";
+
+
+/* ----------------------------------------------------------
+   Yu-Peng Lin academic homepage custom styling
+   ---------------------------------------------------------- */
+
+:root {
+  --yl-ink: #183247;
+  --yl-muted: #627386;
+  --yl-line: #d9e5ee;
+  --yl-soft: #f5f9fc;
+  --yl-soft-2: #edf6fa;
+  --yl-accent: #2d6f8e;
+  --yl-accent-2: #7ca58d;
+  --yl-shadow: 0 14px 38px rgba(25, 55, 80, 0.09);
+}
+
+body {
+  color: var(--yl-ink);
+  background: linear-gradient(180deg, #f8fbfd 0%, #ffffff 35%, #f8faf8 100%);
+}
+
+/* Hide the duplicated site-name text in the masthead. The sidebar already carries the profile identity. */
+.masthead__menu-item--lg,
+.greedy-nav .site-title,
+.site-title {
+  display: none !important;
+}
+
+.masthead {
+  border-bottom: 1px solid #e3edf3;
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.greedy-nav {
+  background: transparent;
+}
+
+.greedy-nav a {
+  color: #526375;
+}
+
+.greedy-nav a:hover {
+  color: var(--yl-accent);
+}
+
+.sidebar {
+  border: 1px solid var(--yl-line);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: var(--yl-shadow);
+  overflow: hidden;
+  padding: 0 !important;
+}
+
+.sidebar .academic-author-card {
+  padding: 30px 28px 22px;
+  background: radial-gradient(circle at top left, #e7f3f8 0%, #f8fbfd 46%, #ffffff 100%);
+}
+
+.author__avatar {
+  display: none !important;
+}
+
+.author-initials {
+  width: 96px;
+  height: 96px;
+  border-radius: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 650;
+  letter-spacing: .02em;
+  color: #ffffff;
+  background: linear-gradient(135deg, #2d6f8e 0%, #7ca58d 100%);
+  margin-bottom: 18px;
+  box-shadow: 0 12px 28px rgba(45, 111, 142, .22);
+}
+
+.author__content .author__name {
+  margin: 0 0 12px;
+  color: var(--yl-ink);
+  font-size: 1.65rem;
+  line-height: 1.15;
+  letter-spacing: -.015em;
+  font-weight: 650;
+}
+
+.author__content .author-line {
+  margin: 0 0 10px;
+  line-height: 1.45;
+}
+
+.author__content .author-role {
+  color: #344f63;
+  font-size: .98rem;
+  font-weight: 650;
+}
+
+.author__content .author-affiliation {
+  color: #426273;
+  font-size: .96rem;
+}
+
+.author__content .author-location {
+  color: var(--yl-muted);
+  font-size: .92rem;
+}
+
+.author__content .author-interests {
+  color: var(--yl-muted);
+  font-size: .9rem;
+  line-height: 1.5;
+}
+
+.author__urls-wrapper {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--yl-line);
+}
+
+.author__urls-wrapper .btn {
+  display: none;
+}
+
+.author__urls.social-icons {
+  margin: 0;
+}
+
+.author__urls.social-icons li {
+  white-space: normal;
+}
+
+.author__urls.social-icons a {
+  color: #344f63;
+  font-size: .92rem;
+}
+
+.page__content {
+  color: #344f63;
+}
+
+.page__content h2,
+.page__content h3 {
+  color: #173b57;
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    border-radius: 20px;
+    margin-bottom: 1.5rem;
+  }
+}
+

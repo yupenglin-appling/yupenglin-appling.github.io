@@ -1,17 +1,21 @@
-# Static deployment package
+# Static academic homepage deployment package v2
 
-This package is designed to make the GitHub Pages site visually match the preview.
+This version fixes the full Publications page.
 
-Upload/replace these files in the root of the repository:
+Upload these files/folders to the root of `yupenglin-appling.github.io`:
 
-- index.html
-- .nojekyll
-- robots.txt
-- sitemap.xml
-- 404.html
-- publications/index.html
-- academic-service/index.html
+- `index.html`
+- `.nojekyll`
+- `publications/index.html`
+- `publications.html`
+- `academic-service/index.html`
+- `404.html`
+- `robots.txt`
+- `sitemap.xml`
 
 Important:
-The `.nojekyll` file disables Jekyll processing. This prevents the Academic Pages theme from overriding the preview design.
-After uploading, wait for GitHub Pages to rebuild and refresh https://yupenglin-appling.github.io/ with Ctrl+F5.
+- Do not upload the ZIP file itself.
+- Make sure the folder `publications` exists in the repository root and contains `index.html`.
+- The full Publications page should be available at:
+  `https://yupenglin-appling.github.io/publications/`
+- `publications.html` is only a redirect for compatibility.

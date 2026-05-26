@@ -58,8 +58,9 @@
 
     .topbar a {
       color: #526375;
-      font-size: 0.92rem;
-      font-weight: 650;
+      font-size: 0.88rem;
+      font-weight: 750;
+      letter-spacing: .04em;
     }
 
     .topbar a:hover, .topbar a.active { color: var(--accent-dark); text-decoration: none; }
@@ -303,6 +304,12 @@
       font-weight: 700;
     }
 
+    .service-role-card .venue,
+    .service-role-card .venue a,
+    .journal-pill .journal-name {
+      font-style: italic;
+    }
+
     .service-role-card .time {
       margin: 0;
       color: var(--muted);
@@ -367,11 +374,9 @@
 <body>
   <header class="topbar" aria-label="Main navigation">
     <nav class="topbar-inner">
-      <a href="/" class="">Home</a>
-      <a href="/#research-interests" class="">Research Interests</a>
-      <a href="/#education" class="">Education</a>
-      <a href="/publications/" class="">Publications</a>
-      <a href="/academic-service/" class="active">Academic Service</a>
+      <a href="/">HOMEPAGE</a>
+      <a href="/publications/">PUBLICATIONS</a>
+      <a href="/academic-service/" class="active">ACADEMIC SERVICE</a>
     </nav>
   </header>
 
@@ -396,8 +401,9 @@
 
         <div class="side-block side-nav" aria-label="Full pages">
           <p class="side-title">Full pages</p>
-          <a href="/publications/">Full Publications</a>
-          <a href="/academic-service/" class="active">Academic Service Page</a>
+          <a href="/">Homepage</a>
+          <a href="/publications/">Publications</a>
+          <a href="/academic-service/">Academic Service</a>
         </div>
 
         <div class="side-block">
@@ -439,26 +445,26 @@
         <h3>Invited Reviewer for Journals</h3>
         <p class="subtitle">Peer review</p>
         <div class="journal-grid">
-          <div class="journal-pill"><span>Computers &amp; Education</span><span>SSCI Q1</span></div>
-          <div class="journal-pill"><span>International Journal of STEM Education</span><span>SSCI Q1</span></div>
-          <div class="journal-pill"><span>System</span><span>SSCI Q1</span></div>
-          <div class="journal-pill"><span>Computer Assisted Language Learning</span><span>SSCI Q1</span></div>
-          <div class="journal-pill"><span>Language Teaching Research</span><span>SSCI Q1</span></div>
-          <div class="journal-pill"><span>Language Learning &amp; Technology</span><span>SSCI Q1</span></div>
-          <div class="journal-pill"><span>International Journal of Human-Computer Interaction</span><span>SSCI/SCI Q1</span></div>
-          <div class="journal-pill"><span>Interactive Learning Environments</span><span>SSCI Q1</span></div>
-          <div class="journal-pill"><span>Education and Information Technologies</span><span>SSCI Q1</span></div>
-          <div class="journal-pill"><span>Teaching and Teacher Education</span><span>SSCI Q1</span></div>
-          <div class="journal-pill"><span>European Journal of Psychology of Education</span><span>SSCI Q2</span></div>
-          <div class="journal-pill"><span>IEEE Transactions on Learning Technologies</span><span>SSCI Q1</span></div>
-          <div class="journal-pill"><span>Journal of Educational Computing Research</span><span>SSCI Q1</span></div>
-          <div class="journal-pill"><span>The Asia-Pacific Education Researcher</span><span>SSCI Q1</span></div>
-          <div class="journal-pill"><span>Journal of Computer Assisted Learning</span><span>SSCI Q1</span></div>
-          <div class="journal-pill"><span>Journal of Educational Research</span><span>SSCI Q2</span></div>
-          <div class="journal-pill"><span>Behaviour &amp; Information Technology</span><span>SSCI Q2</span></div>
-          <div class="journal-pill"><span>Universal Access in the Information Society</span><span>SCI Q2</span></div>
-          <div class="journal-pill"><span>Learning and Motivation</span><span>SSCI Q3</span></div>
-          <div class="journal-pill"><span>Humanities and Social Sciences Communications</span><span>SSCI Q1 · AHCI</span></div>
+          <div class="journal-pill"><span class="journal-name">Computers &amp; Education</span><span>SSCI Q1</span></div>
+          <div class="journal-pill"><span class="journal-name">International Journal of STEM Education</span><span>SSCI Q1</span></div>
+          <div class="journal-pill"><span class="journal-name">System</span><span>SSCI Q1</span></div>
+          <div class="journal-pill"><span class="journal-name">Computer Assisted Language Learning</span><span>SSCI Q1</span></div>
+          <div class="journal-pill"><span class="journal-name">Language Teaching Research</span><span>SSCI Q1</span></div>
+          <div class="journal-pill"><span class="journal-name">Language Learning &amp; Technology</span><span>SSCI Q1</span></div>
+          <div class="journal-pill"><span class="journal-name">International Journal of Human-Computer Interaction</span><span>SSCI/SCI Q1</span></div>
+          <div class="journal-pill"><span class="journal-name">Interactive Learning Environments</span><span>SSCI Q1</span></div>
+          <div class="journal-pill"><span class="journal-name">Education and Information Technologies</span><span>SSCI Q1</span></div>
+          <div class="journal-pill"><span class="journal-name">Teaching and Teacher Education</span><span>SSCI Q1</span></div>
+          <div class="journal-pill"><span class="journal-name">European Journal of Psychology of Education</span><span>SSCI Q2</span></div>
+          <div class="journal-pill"><span class="journal-name">IEEE Transactions on Learning Technologies</span><span>SSCI Q1</span></div>
+          <div class="journal-pill"><span class="journal-name">Journal of Educational Computing Research</span><span>SSCI Q1</span></div>
+          <div class="journal-pill"><span class="journal-name">The Asia-Pacific Education Researcher</span><span>SSCI Q1</span></div>
+          <div class="journal-pill"><span class="journal-name">Journal of Computer Assisted Learning</span><span>SSCI Q1</span></div>
+          <div class="journal-pill"><span class="journal-name">Journal of Educational Research</span><span>SSCI Q2</span></div>
+          <div class="journal-pill"><span class="journal-name">Behaviour &amp; Information Technology</span><span>SSCI Q2</span></div>
+          <div class="journal-pill"><span class="journal-name">Universal Access in the Information Society</span><span>SCI Q2</span></div>
+          <div class="journal-pill"><span class="journal-name">Learning and Motivation</span><span>SSCI Q3</span></div>
+          <div class="journal-pill"><span class="journal-name">Humanities and Social Sciences Communications</span><span>SSCI Q1 · AHCI</span></div>
         </div>
       </section>
     </main>

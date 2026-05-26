@@ -58,8 +58,9 @@
 
     .topbar a {
       color: #526375;
-      font-size: 0.92rem;
-      font-weight: 650;
+      font-size: 0.88rem;
+      font-weight: 750;
+      letter-spacing: .04em;
     }
 
     .topbar a:hover, .topbar a.active { color: var(--accent-dark); text-decoration: none; }
@@ -303,6 +304,12 @@
       font-weight: 700;
     }
 
+    .service-role-card .venue,
+    .service-role-card .venue a,
+    .journal-pill .journal-name {
+      font-style: italic;
+    }
+
     .service-role-card .time {
       margin: 0;
       color: var(--muted);
@@ -367,11 +374,9 @@
 <body>
   <header class="topbar" aria-label="Main navigation">
     <nav class="topbar-inner">
-      <a href="/" class="">Home</a>
-      <a href="/#research-interests" class="">Research Interests</a>
-      <a href="/#education" class="">Education</a>
-      <a href="/publications/" class="active">Publications</a>
-      <a href="/academic-service/" class="">Academic Service</a>
+      <a href="/">HOMEPAGE</a>
+      <a href="/publications/" class="active">PUBLICATIONS</a>
+      <a href="/academic-service/">ACADEMIC SERVICE</a>
     </nav>
   </header>
 
@@ -396,8 +401,9 @@
 
         <div class="side-block side-nav" aria-label="Full pages">
           <p class="side-title">Full pages</p>
-          <a href="/publications/" class="active">Full Publications</a>
-          <a href="/academic-service/">Academic Service Page</a>
+          <a href="/">Homepage</a>
+          <a href="/publications/">Publications</a>
+          <a href="/academic-service/">Academic Service</a>
         </div>
 
         <div class="side-block">

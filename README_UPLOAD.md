@@ -1,8 +1,8 @@
-# Full static site update
+# Upload instructions
 
-Upload the contents of this package to the root of `yupenglin-appling.github.io` and overwrite existing files with the same paths.
+This package updates the static website consistently across all pages.
 
-Updated files:
+Replace the files in your repository root with the files/folders in this package:
 
 - `index.html`
 - `publications/index.html`
@@ -11,4 +11,10 @@ Updated files:
 - `_data/navigation.yml`
 - `_includes/author-profile.html`
 
-Important: do not upload the outer folder itself as a new folder. Upload the files and folders inside it to the repository root.
+Important: upload these files to the repository root. Do not upload the outer folder itself.
+
+Main changes:
+
+1. The top navigation bar now contains only three labels: `HOMEPAGE`, `PUBLICATIONS`, and `ACADEMIC SERVICE`.
+2. The sidebar is unified across the homepage, Publications page, and Academic Service page.
+3. Journal titles in the Academic Service sections are italicized.

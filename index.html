@@ -123,6 +123,9 @@
       font-size: .9rem;
       word-break: break-word;
     }
+    .email-address {
+      color: #0000FF;
+    }
     main { min-width: 0; }
     .top-nav {
       display: flex;
@@ -344,6 +347,15 @@
       transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
       cursor: pointer;
     }
+    .pub-card.author-first {
+      border-left-color: #1f5f8b;
+    }
+    .pub-card.author-corresponding {
+      border-left-color: #5f9f8a;
+    }
+    .pub-card.author-other {
+      border-left-color: #c7d6df;
+    }
     .pub-card:hover {
       text-decoration: none;
       transform: translateY(-2px);
@@ -491,12 +503,13 @@
       <nav>
         <a href="/">Home</a>
         <a href="/#research">Research Interests</a>
+        <a href="/#research-skills">Research Skills</a>
         <a href="/#education">Education</a>
-        <a href="/publications/">Publications</a>
+        <a href="/#publications">Publications</a>
         <a href="/academic-service/">Academic Service</a>
       </nav>
       <div class="email-box">
-        <strong>Email</strong><br />linyupeng.research@gmail.com
+        <strong>Email</strong><br /><span class="email-address">linyupeng.research@gmail.com</span>
       </div>
     </aside>
 
@@ -539,6 +552,15 @@
             <h3>Positive psychology in EFL learning</h3>
             <p>Learner motivation, enjoyment, academic buoyancy, engagement, grit, self-efficacy, and psychologically supportive learning environments.</p>
           </div>
+        </div>
+      </section>
+
+      <section id="research-skills">
+        <div class="section-header">
+          <h2>Research Skills</h2>
+          <div class="section-kicker">Methodological expertise</div>
+        </div>
+        <div class="grid">
           <div class="interest-card">
             <h3>Research synthesis and methodology</h3>
             <p>Systematic review, bibliometric analysis, meta-analysis, structural equation modeling, mixed methods, and scale development.</p>
@@ -604,23 +626,23 @@
           <div class="section-kicker">Journal articles</div>
         </div>
         <div class="pub-list">
-          <div class="pub-card" onclick="window.open('https://doi.org/10.1111/ijal.70092','_blank')" role="link" tabindex="0">
-            <p><strong>Lin, Y., &amp; Liu, M.</strong> (2026). From self-prepared writers to strategy effectiveness evaluators: Mediation of critical thinking during self-regulated EFL writing. <em>International Journal of Applied Linguistics</em>, 1–13.</p>
+          <div class="pub-card author-first" onclick="window.open('https://doi.org/10.1111/ijal.70092','_blank')" role="link" tabindex="0">
+            <p><strong>Lin, Y.</strong>, &amp; Liu, M. (2026). From self-prepared writers to strategy effectiveness evaluators: Mediation of critical thinking during self-regulated EFL writing. <em>International Journal of Applied Linguistics</em>, 1–13.</p>
             <span class="doi-text">doi:10.1111/ijal.70092</span>
             <div class="tag-row"><span class="tag">EFL writing</span><span class="tag">Self-regulated learning</span><span class="tag">Critical thinking</span></div>
           </div>
-          <div class="pub-card" onclick="window.open('https://doi.org/10.1080/10447318.2024.2359222','_blank')" role="link" tabindex="0">
-            <p><strong>Lin, Y., &amp; Yu, Z.</strong> (2025). Learner perceptions of artificial intelligence-generated pedagogical agents in language learning videos: Embodiment effects on technology acceptance. <em>International Journal of Human-Computer Interaction</em>, 41(2), 1606–1627.</p>
+          <div class="pub-card author-first" onclick="window.open('https://doi.org/10.1080/10447318.2024.2359222','_blank')" role="link" tabindex="0">
+            <p><strong>Lin, Y.</strong>, &amp; Yu, Z. (2025). Learner perceptions of artificial intelligence-generated pedagogical agents in language learning videos: Embodiment effects on technology acceptance. <em>International Journal of Human-Computer Interaction</em>, 41(2), 1606–1627.</p>
             <span class="doi-text">doi:10.1080/10447318.2024.2359222</span>
             <div class="tag-row"><span class="tag">AI pedagogical agents</span><span class="tag">Embodiment</span><span class="tag">Technology acceptance</span></div>
           </div>
-          <div class="pub-card" onclick="window.open('https://doi.org/10.1057/s41599-024-03861-1','_blank')" role="link" tabindex="0">
-            <p><strong>Lin, Y., &amp; Yu, Z.</strong> (2025). Elucidating university students’ intentions to seek automated writing feedback from Grammarly: Toward perceptual and systemic predictors. <em>Humanities and Social Sciences Communications</em>, 12, 7.</p>
+          <div class="pub-card author-first" onclick="window.open('https://doi.org/10.1057/s41599-024-03861-1','_blank')" role="link" tabindex="0">
+            <p><strong>Lin, Y.</strong>, &amp; Yu, Z. (2025). Elucidating university students’ intentions to seek automated writing feedback from Grammarly: Toward perceptual and systemic predictors. <em>Humanities and Social Sciences Communications</em>, 12, 7.</p>
             <span class="doi-text">doi:10.1057/s41599-024-03861-1</span>
             <div class="tag-row"><span class="tag">Automated writing feedback</span><span class="tag">Grammarly</span><span class="tag">EFL learners</span></div>
           </div>
-          <div class="pub-card" onclick="window.open('https://doi.org/10.1186/s41239-023-00403-8','_blank')" role="link" tabindex="0">
-            <p><strong>Lin, Y., &amp; Yu, Z.</strong> (2023). Extending Technology Acceptance Model to higher-education students’ use of digital academic reading tools on computers. <em>International Journal of Educational Technology in Higher Education</em>, 20, 34.</p>
+          <div class="pub-card author-first" onclick="window.open('https://doi.org/10.1186/s41239-023-00403-8','_blank')" role="link" tabindex="0">
+            <p><strong>Lin, Y.</strong>, &amp; Yu, Z. (2023). Extending Technology Acceptance Model to higher-education students’ use of digital academic reading tools on computers. <em>International Journal of Educational Technology in Higher Education</em>, 20, 34.</p>
             <span class="doi-text">doi:10.1186/s41239-023-00403-8</span>
             <div class="tag-row"><span class="tag">Digital academic reading</span><span class="tag">Higher education</span><span class="tag">TAM</span></div>
           </div>
@@ -681,7 +703,6 @@
         </div>
       </section>
 
-      <footer>Avatar, CV, external profile links, and Chinese sections are intentionally omitted.</footer>
     </main>
   </div>
 </body>

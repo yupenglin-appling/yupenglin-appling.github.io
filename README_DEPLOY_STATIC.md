@@ -1,9 +1,10 @@
-# Static academic homepage deployment package v2
+# Static academic homepage deployment package v3
 
-This version fixes the full Publications page.
+This version corrects the full Publications page against the current Google Sites publication page.
 
-Upload these files/folders to the root of `yupenglin-appling.github.io`:
+Upload all files/folders in this package to the root of `yupenglin-appling.github.io`.
 
+Important files:
 - `index.html`
 - `.nojekyll`
 - `publications/index.html`
@@ -13,9 +14,5 @@ Upload these files/folders to the root of `yupenglin-appling.github.io`:
 - `robots.txt`
 - `sitemap.xml`
 
-Important:
-- Do not upload the ZIP file itself.
-- Make sure the folder `publications` exists in the repository root and contains `index.html`.
-- The full Publications page should be available at:
-  `https://yupenglin-appling.github.io/publications/`
-- `publications.html` is only a redirect for compatibility.
+The corrected full Publications page will be available at:
+https://yupenglin-appling.github.io/publications/

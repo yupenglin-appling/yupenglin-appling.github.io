@@ -1,3 +1,1 @@
-fixed-static-2026-05-26
-Homepage intro bio paragraphs removed.
-.nojekyll added.
+fixed-static-2026-05-27-sidebar-publication-tags

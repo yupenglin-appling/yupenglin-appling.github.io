@@ -11,7 +11,6 @@ redirect_from:
   <div class="yl-section-label">Academic Homepage</div>
   <p class="yl-intro-lead">PhD candidate working at the intersection of AI-assisted language learning, EFL writing, and learner psychology.</p>
   <p>I am a PhD candidate in Applied Linguistics at the Department of Foreign Languages and Literatures, Tsinghua University. My research examines how modern technologies, including AI-assisted learning environments and digital writing tools, shape learners’ motivation, strategy use, engagement, and reflective development in English as a foreign language context.</p>
-  <p>Before joining Tsinghua University, I completed an M.A. in Applied Linguistics in Foreign Languages at Beijing Language and Culture University and a B.A. in English Language and Literature at Sichuan International Studies University.</p>
   <div class="yl-keywords">
     <span>EFL Writing</span>
     <span>AI-Assisted Language Learning</span>

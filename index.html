@@ -335,7 +335,7 @@
       display: block;
       color: inherit;
       text-decoration: none;
-      border-left: 5px solid #6f9ab5;
+      border-left: 5px solid #8fa5b3;
       border-radius: 0 18px 18px 0;
       background: #fbfdff;
       padding: 16px 18px;
@@ -351,6 +351,15 @@
       background: #ffffff;
       box-shadow: 0 10px 24px rgba(35, 72, 105, .09);
     }
+    .pub-card.first-author {
+      border-left-color: #2d6f8e;
+    }
+    .pub-card.correspondence {
+      border-left-color: #b86d21;
+    }
+    .pub-card.other-author {
+      border-left-color: #7ca58d;
+    }
     .pub-card p { margin: 0 0 8px; }
     .pub-card em { color: #263f52; }
     .doi-text {
@@ -358,6 +367,39 @@
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       font-size: .88rem;
       font-weight: 650;
+    }
+    .pub-meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin: .42rem 0 .18rem;
+    }
+    .publication-note,
+    .author-position-tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 9px;
+      border-radius: 999px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: .74rem;
+      font-weight: 800;
+      line-height: 1.25;
+      letter-spacing: .01em;
+    }
+    .publication-note {
+      color: #755323;
+      background: #fff6e8;
+      border: 1px solid #f0d7a8;
+    }
+    .author-position-tag {
+      color: #ffffff;
+      border: 1px solid transparent;
+    }
+    .pub-card.first-author .author-position-tag {
+      background: #2d6f8e;
+    }
+    .pub-card.correspondence .author-position-tag {
+      background: #b86d21;
     }
     .tag-row {
       display: flex;
@@ -510,7 +552,6 @@
 <div class="eyebrow">Academic Homepage</div>
 <p class="hero-statement"><strong><em>PhD candidate working at the intersection of AI-assisted language learning, EFL writing, and learner psychology.</em></strong></p>
 <p>I am a PhD candidate in Applied Linguistics at the Department of Foreign Languages and Literatures, Tsinghua University. My research examines how modern technologies, including AI-assisted learning environments and digital writing tools, shape learners’ motivation, strategy use, engagement, and reflective development in English as a foreign language contexts.</p>
-
 <div class="pills">
 <span class="pill">EFL Writing</span>
 <span class="pill">AI-Assisted Language Learning</span>
@@ -599,24 +640,24 @@
 <div class="section-kicker">Journal articles</div>
 </div>
 <div class="pub-list">
-<div class="pub-card" onclick="window.open('https://doi.org/10.1111/ijal.70092','_blank')" role="link" tabindex="0">
-<p><strong>Lin, Y., &amp; Liu, M.</strong> (2026). From self-prepared writers to strategy effectiveness evaluators: Mediation of critical thinking during self-regulated EFL writing. <em>International Journal of Applied Linguistics</em>, 1–13.</p>
-<span class="doi-text">doi:10.1111/ijal.70092</span>
+<div class="pub-card first-author" onclick="window.open('https://doi.org/10.1111/ijal.70092','_blank')" role="link" tabindex="0">
+<p><strong>Lin, Y.</strong>, &amp; Liu, M. (2026). From self-prepared writers to strategy effectiveness evaluators: Mediation of critical thinking during self-regulated EFL writing. <em>International Journal of Applied Linguistics</em>, 1–13.</p>
+<span class="doi-text">doi:10.1111/ijal.70092</span><div class="pub-meta-row"><span class="author-position-tag">First Author</span><span class="publication-note">SSCI Q1; IF = 1.7</span></div>
 <div class="tag-row"><span class="tag">EFL writing</span><span class="tag">Self-regulated learning</span><span class="tag">Critical thinking</span></div>
 </div>
-<div class="pub-card" onclick="window.open('https://doi.org/10.1080/10447318.2024.2359222','_blank')" role="link" tabindex="0">
-<p><strong>Lin, Y., &amp; Yu, Z.</strong> (2025). Learner perceptions of artificial intelligence-generated pedagogical agents in language learning videos: Embodiment effects on technology acceptance. <em>International Journal of Human-Computer Interaction</em>, 41(2), 1606–1627.</p>
-<span class="doi-text">doi:10.1080/10447318.2024.2359222</span>
+<div class="pub-card first-author" onclick="window.open('https://doi.org/10.1080/10447318.2024.2359222','_blank')" role="link" tabindex="0">
+<p><strong>Lin, Y.</strong>, &amp; Yu, Z. (2025). Learner perceptions of artificial intelligence-generated pedagogical agents in language learning videos: Embodiment effects on technology acceptance. <em>International Journal of Human-Computer Interaction</em>, 41(2), 1606–1627.</p>
+<span class="doi-text">doi:10.1080/10447318.2024.2359222</span><div class="pub-meta-row"><span class="author-position-tag">First Author</span><span class="publication-note">SSCI/SCI Q1; IF = 4.9; ESI 1% highly cited paper</span></div>
 <div class="tag-row"><span class="tag">AI pedagogical agents</span><span class="tag">Embodiment</span><span class="tag">Technology acceptance</span></div>
 </div>
-<div class="pub-card" onclick="window.open('https://doi.org/10.1057/s41599-024-03861-1','_blank')" role="link" tabindex="0">
-<p><strong>Lin, Y., &amp; Yu, Z.</strong> (2025). Elucidating university students’ intentions to seek automated writing feedback from Grammarly: Toward perceptual and systemic predictors. <em>Humanities and Social Sciences Communications</em>, 12, 7.</p>
-<span class="doi-text">doi:10.1057/s41599-024-03861-1</span>
+<div class="pub-card first-author" onclick="window.open('https://doi.org/10.1057/s41599-024-03861-1','_blank')" role="link" tabindex="0">
+<p><strong>Lin, Y.</strong>, &amp; Yu, Z. (2025). Elucidating university students’ intentions to seek automated writing feedback from Grammarly: Toward perceptual and systemic predictors. <em>Humanities and Social Sciences Communications</em>, 12, 7.</p>
+<span class="doi-text">doi:10.1057/s41599-024-03861-1</span><div class="pub-meta-row"><span class="author-position-tag">First Author</span><span class="publication-note">SSCI Q1; A&amp;HCI; Nature Portfolio; IF = 3.6</span></div>
 <div class="tag-row"><span class="tag">Automated writing feedback</span><span class="tag">Grammarly</span><span class="tag">EFL learners</span></div>
 </div>
-<div class="pub-card" onclick="window.open('https://doi.org/10.1186/s41239-023-00403-8','_blank')" role="link" tabindex="0">
-<p><strong>Lin, Y., &amp; Yu, Z.</strong> (2023). Extending Technology Acceptance Model to higher-education students’ use of digital academic reading tools on computers. <em>International Journal of Educational Technology in Higher Education</em>, 20, 34.</p>
-<span class="doi-text">doi:10.1186/s41239-023-00403-8</span>
+<div class="pub-card first-author" onclick="window.open('https://doi.org/10.1186/s41239-023-00403-8','_blank')" role="link" tabindex="0">
+<p><strong>Lin, Y.</strong>, &amp; Yu, Z. (2023). Extending Technology Acceptance Model to higher-education students’ use of digital academic reading tools on computers. <em>International Journal of Educational Technology in Higher Education</em>, 20, 34.</p>
+<span class="doi-text">doi:10.1186/s41239-023-00403-8</span><div class="pub-meta-row"><span class="author-position-tag">First Author</span><span class="publication-note">SSCI Q1; IF = 16.7</span></div>
 <div class="tag-row"><span class="tag">Digital academic reading</span><span class="tag">Higher education</span><span class="tag">TAM</span></div>
 </div>
 </div>
